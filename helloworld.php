@@ -5,7 +5,7 @@ $variable = "\nHello World" . " yes";
 
 $number = 22;
 
-$number *= 2;
+$number *= 3;
 
 $a = "number";
 

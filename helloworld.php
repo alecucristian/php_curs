@@ -11,7 +11,10 @@ $a = "number";
 
 echo '\nMy age is ' . $$a;
 
+// Arrays
 
+$array = array('name', 'email', 'address');
+print_r($array);
 
 echo $number;
 

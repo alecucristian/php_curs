@@ -70,17 +70,54 @@ foreach($array as $key=>$value) {
 
 // While loops
 echo "<br>";
-$i = 0;
+$i = 1;
 
-$array = array('name', 'email', 'adress');
-while($array[$i]) {
-    echo "$array[$i] </br>";
-    $i++;
+// $array = array('name', 'email', 'adress');
+// while ($array[$i]) {
+    // echo "$array[$i] <br>";
+    // $i++;
+
+// }
+
+// $_GET Variables
+if (isset($_GET['s'] ) ) {
+    echo '<p>Your search term is:</p>' . $_GET['s'];
+
+}
+// print_r($_GET);
+
+
+//  $_POST Variables
+
+if (isset($_POST['s'] ) ) {
+    echo '<p>Your search term is:</p>' . $_POST['s'];
 
 }
 
-// echo $number;
-
-
-
 ?>
+<form method="get" action=""
+    <label>Enter search term g</label>
+    <input type="search" name="s" value="<?php
+     if( isset($_GET['s'] ) ){
+         echo $_GET['s']; 
+
+     }
+     ?>">
+</form>
+<form method="post" action=""
+    <label> Enter search term p </label>
+    <input type="search" name="s" value="<?php
+     if( isset($_POST['s'] ) ){
+         echo $_POST['s']; 
+
+     }
+     ?>">
+</form>
+
+
+
+
+
+
+
+

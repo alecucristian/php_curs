@@ -1,9 +1,11 @@
 <?php
 // Helper funtion. Likely place in external file
+
 function _e( $string ) {
+    // echo htmlentities( $string, ENT_QUOTES, 'UTF-8', false );
     return htmlentities( $string, ENT_QUOTES, 'UTF-8', false );
 
- }
+}
 
 //  STUFF YOU NEED TO CHANGE FOR YOUR SPECIFIC FORM
 

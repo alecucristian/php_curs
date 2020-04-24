@@ -32,7 +32,7 @@ if ( ! empty( $_POST ) ) {
 
     // Validate math
     if ( intval( $_POST['human'] ) !== 7 ) {
-        $errors[] = 'That is not a valid email address';
+        $errors[] = 'That is not a correct answer';
     }
 
 
@@ -59,6 +59,7 @@ if ( ! empty( $_POST ) ) {
     // Check and process 
     if ( empty( $errors ) ) {
         $sent = mail( $email_address, $subject, $fields['message'] );
+        echo $sent;
     }
 }
 ?>
@@ -85,11 +86,11 @@ if ( ! empty( $_POST ) ) {
             <div class="row">
                 <div class="col-md-12">
                     <h1>Enter your message</h1>
-                    <?php if ( empty( $errors ) ) : ?>
+                    <?php if ( isset( $errors ) ) : ?>
                     <div class="erorrs">
                         <p class="bg-danger"><?php echo implode( '</p><p class="bg-danger">', $errors ); ?></p>
                     </div>
-                    <?php elseif ( $sent  ) : ?>
+                    <?php elseif ( 1 === 1 ) : ?>
                     <div class="success">
                         <p class="bg-success"> Your message was sent. We'll be in touch</p>
 

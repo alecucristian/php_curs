@@ -2,6 +2,7 @@
 // Syntax
 function echo_stuff() {
     echo 'Hey boss!';
+    echo '<br>';
 } 
 
 echo_stuff();
